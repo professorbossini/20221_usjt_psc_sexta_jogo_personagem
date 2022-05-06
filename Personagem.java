@@ -18,6 +18,12 @@ public class Personagem{
     private int energia;
     private int fome;
     private int sono;
+    private final static int MAX_ENERGIA = 10;
+    private final static int MIN_ENERGIA = 0;
+    private final static int MAX_FOME = 10;
+    private final static int MIN_FOME = 0;
+    private final static int MAX_SONO = 10;
+    private final static int MIN_SONO = 0;
 
 
     //método de acesso(getter)
@@ -39,7 +45,7 @@ public class Personagem{
     }
 
     public Personagem(){
-        this(10, 0, 0);
+        this(MAX_ENERGIA, MIN_FOME, MIN_SONO);
         // energia = 10;
         // fome = 0;
         // sono = 0;
@@ -48,8 +54,11 @@ public class Personagem{
     public Personagem (int energia, int fome, int sono){
         //resolver o problema usando o operador ternário
         //se a energia estiver no intervalo válido, fazer a atribuição. caso contrário, atribuir 10
+        //anti-pattern: números mágicos
+        this.energia = energia >= MIN_ENERGIA && energia <= MAX_ENERGIA ? energia : MAX_ENERGIA;
+        this.fome = fome >= MIN_FOME && fome <= MAX_FOME ? fome : MIN_FOME;
+        this.sono = sono >= MIN_SONO && sono <= MAX_SONO ? sono : MIN_SONO;
 
-        
         // if (energia >= 0 && energia <= 10)
         //     this.energia = energia;
         // if (fome >= 0  && fome <= 10)
