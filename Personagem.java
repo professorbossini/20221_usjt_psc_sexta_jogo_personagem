@@ -58,7 +58,6 @@ public class Personagem{
         this.energia = energia >= MIN_ENERGIA && energia <= MAX_ENERGIA ? energia : MAX_ENERGIA;
         this.fome = fome >= MIN_FOME && fome <= MAX_FOME ? fome : MIN_FOME;
         this.sono = sono >= MIN_SONO && sono <= MAX_SONO ? sono : MIN_SONO;
-
         // if (energia >= 0 && energia <= 10)
         //     this.energia = energia;
         // if (fome >= 0  && fome <= 10)
