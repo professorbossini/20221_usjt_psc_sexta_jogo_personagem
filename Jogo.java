@@ -3,14 +3,15 @@ import java.util.Random;
 //desejamos classes altamente coesas
 public class Jogo {
     public static void main(String[] args) throws Exception{
+
         //variável de referência
         // Personagem p;
         // p = new Personagem();
         Personagem p = new Personagem();
 
         //operador de acesso a membro: .
-        p.nome = "João";
-        p.energia = 102;
+        //p.nome = "João";
+        //p.energia = 102;
         Random gerador = new Random();
         //1: caçar
         //2: comer
@@ -31,7 +32,7 @@ public class Jogo {
                     p.dormir();
                     break;
             }
-            System.out.printf("Energia: %d, Fome: %d, Sono: %d\n", p.energia, p.fome, p.sono);
+            System.out.printf("Energia: %d, Fome: %d, Sono: %d\n", p.getEnergia(), p.fome, p.sono);
             System.out.println("==============================================================");
             Thread.sleep(5000);
         }

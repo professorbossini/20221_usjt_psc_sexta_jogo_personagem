@@ -1,9 +1,63 @@
+// class Point{
+//     final int x, y;
+
+//     public Point(int x, int y){
+//         this.x = x;
+//         this.y = y;
+//     }
+
+//     void m(){
+//         Point p = new Point (2, 3);
+//         System.out.println(p.x);
+//     }
+// }
+
 public class Personagem{
     //atributos(variáveis)
-    String nome;
-    int energia = 10;
-    int fome = 0;
-    int sono = 0;
+    private String nome;
+    private int energia;
+    private int fome;
+    private int sono;
+
+
+    //método de acesso(getter)
+    //tipo de retorno
+    //nome
+    //lista de parâmetros
+    //corpo
+    
+
+    //setter
+    // public void setEnergia(int energia){
+    //     this.energia = energia;
+    // }
+
+
+    public Personagem(String nome){
+        this();
+        this.nome = nome;
+    }
+
+    public Personagem(){
+        this(10, 0, 0);
+        // energia = 10;
+        // fome = 0;
+        // sono = 0;
+    }
+
+    public Personagem (int energia, int fome, int sono){
+        //resolver o problema usando o operador ternário
+        //se a energia estiver no intervalo válido, fazer a atribuição. caso contrário, atribuir 10
+
+        
+        // if (energia >= 0 && energia <= 10)
+        //     this.energia = energia;
+        // if (fome >= 0  && fome <= 10)
+        //     this.fome = fome;
+        // if (sono >= 0 && sono <= 10)
+        //     this.sono = sono;
+    }
+
     
     //comportamentos(métodos)
     
